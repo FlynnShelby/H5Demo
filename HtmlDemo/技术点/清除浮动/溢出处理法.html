@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*很多情况下，父级盒子，不方便给高度，考虑子盒子高度会变 */
+		.xiongda {
+			background-color: pink;
+			width: 600px;
+			overflow: hidden;/*可触发BFC，BFC可以清除浮动*/
+			/*溢出处理法
+				可以通过触发BFC的方式，实现清除浮动效果。
+				例如：给父级添加overflow属性，值为hidden、auto、scroll，都可以实现。
+				优点：代码简洁。
+				缺点：内容增多时容易造成不自动换行，导致内容被隐藏掉，无法显示溢出的元素。
+			*/
+		}
+		.son1 {
+			background-color: #f33;
+			float: left;
+			width: 180px;
+			height: 180px;
+		}
+		.son2 {
+			background-color: #3f3;
+			float: left;
+			width: 200px;
+			height: 180px;
+		}
+		.xionger {
+			background-color: orange;
+			width: 700px;
+			height: 300px;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div class="xiongda">
+		<div class="son1">123456787654323456786543456</div>
+		<div class="son2">123456787654323456786543456</div>
+		<div class="son1">123456787654323456786543456</div>
+		<div class="son2">123456787654323456786543456</div>
+		<div class="son1">123456787654323456786543456</div>
+		<div class="son2">123456787654323456786543456</div>
+		<div class="son1">123456787654323456786543456</div>
+		<div class="son2">123456787654323456786543456</div>
+		<div class="son1">123456787654323456786543456</div>
+		<div class="son2">123456787654323456786543456</div>
+		<div class="son1">123456787654323456786543456</div>
+		<div class="son2">123456787654323456786543456</div>
+
+	</div>
+	<div class="xionger"></div>
+</body>
+</html>

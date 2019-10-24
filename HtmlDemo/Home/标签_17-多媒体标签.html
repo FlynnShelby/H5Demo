@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多媒体</title>
+</head>
+<body>
+	通用代码播放多媒体<br />
+	<iframe height=498 width=510 src='http://player.youku.com/embed/XNDI4NDUwMDI0NA==' frameborder=0 allowfullscreen></iframe>
+
+	<br />
+	
+	HTML代码播放多媒体<br />
+	<embed height=498 width=510 src='http://player.youku.com/embed/XNDI4NDUwMDI0NA==' frameborder=0 allowfullscreen quality="high" ></embed>
+
+	<br /><br />
+	音频播放一般写法<br />
+	<audio src="珍惜眼前人.mp3" autoplay controls loop="2"></audio><br />
+	<!--autoplay 自动播放  -->
+	<!--controls 显示控制器  -->
+	<!--loop 循环次数，-1表示无限循环-->
+	音频播放兼容写法，我们需要支持三种音频格式：ogg，mp3，wav 	<br />
+	<audio controls autoplay>
+		目前提供ogg和mp3两种格式即可支持大部分浏览器
+		<source src="珍惜眼前人.mp3" />
+		<source src="珍惜眼前人.ogg" />
+		<source src="" />
+		您的浏览器不支持该音频播放
+	</audio>
+
+	小视频播放<br />
+	<video src="" controls autoplay width="500"></video> <br />
+	目前各浏览器兼容三种格式视频：ogg，mpeg4(.mp4)，WebM		<br />
+	<video src="" controls autoplay width="500">
+		<!-- 提供ogg和mp4两种格式即可支持大部分浏览器 -->
+		<source src="xxx.mp4">
+		<source src="xxx.ogg">	
+		<source src="xxx.WebM">
+		您的浏览器不支持该视频播放
+	</video>
+	
+
+	
+</body>
+</html>

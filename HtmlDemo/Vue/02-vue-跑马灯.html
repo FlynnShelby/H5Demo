@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {/*清除浏览器默认内外边距*/
+			margin: 0;
+			padding: 0;
+		}
+		/*css内容*/
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.12/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="button" value="浪起来" @click="lang">
+		<input type="button" value="低调" @click="stop">
+
+		<h4>{{ msg }}</h4>
+	</div>
+
+	<script type="text/javascript">
+	
+		var vm = new Vue ({
+			// 字符串值使用''或者""都可以
+		  el: "#app",
+		  data: {
+		  	msg: "猥琐发育，别浪～～！",
+		  	intervalId:null,
+		  },
+		  methods: {//这个methods定义了当前Vue实例所有可用的方法
+		  	lang() {
+		  		if (this.intervalId != null) return;
+
+		  		 this.intervalId = setInterval(() => {
+		  			var start = this.msg.substring(0,1)
+		  			var end = this.msg.substring(1)
+		  			this.msg = end + start
+		  		},400)
+		  	},
+		  	stop() {
+		  		clearInterval(this.intervalId)
+		  		this.intervalId = null
+		  	}
+		  }
+			
+		})
+		
+
+	</script>
+</body>
+</html>

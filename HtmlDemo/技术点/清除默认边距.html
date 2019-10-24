@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: purple;
+		}
+		ul {
+			background-color: yellow;
+		}
+		li {
+			background-color: #f80;
+		}
+		
+		/*通用全局清除浏览器默认边距,优先级最低*/
+		/** {
+			margin: 0;
+			padding: 0;
+		}*/
+
+		/*指定去边距*/
+		body,div,ul,li {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+
+	<ul>
+		<li>浏览器有默认内外边距，不开心😠</li>
+		<li>浏览器有默认内外边距，不开心😠</li>
+		<li>浏览器有默认内外边距，不开心😠</li>
+	</ul>
+</body>
+</html>

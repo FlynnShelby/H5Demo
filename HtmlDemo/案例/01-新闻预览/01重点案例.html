@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {/*清除浏览器默认内外边距*/
+			margin: 0;
+			padding: 0;
+		}
+		.searchPic {	
+			width: 238px;
+			height: 294px;
+			border: 1px solid #d9e0ee;
+			border-top: 3px solid #ff8400;
+			margin: 100px;
+
+		}
+		.searchPic h3 {
+			height: 35px;
+			line-height: 35px;/*行高等于高度，文字可垂直居中*/
+			border-bottom: 1px solid #d9e0ee;
+			font-size: 16px;
+			font-weight: normal;
+			padding-left: 12px;/*h3没给宽，继承于父视图，padding不会增加h3宽度*/
+		}
+		.searchPic img {
+			margin: 7px 0 0 8px;
+		}
+		ul {
+			list-style: none;
+		}
+		.searchPic ul li a{
+			font-size: 14px;
+			color: #666;
+			text-decoration: none;/*取消下划线*/
+		}
+		.searchPic ul {
+			margin-left: 8px; 
+		}
+		.searchPic ul li {
+			padding-left: 10px;
+			height: 26px;
+			line-height: 26px;
+			background: url(img_point@2x.png) no-repeat left center;
+			-webkit-background-size: 3px 3px;
+			background-size: 3px 3px;
+		}
+		.searchPic ul li a:hover {
+			text-decoration: underline;
+			color: #ff8400;
+		}
+	</style>
+</head>
+<body>
+	<div class="searchPic">
+		<h3>搜索趣图</h3>
+		<img src="../../Home/img1@2x.png" height="160" width="218" />
+		<ul>
+			<li><a href="#">小胖墩游泳被卡，被救后一脸懵逼</a></li>
+			<li><a href="#">小胖墩游泳被卡，被救后一脸懵逼</a></li>
+			<li><a href="#">小胖墩游泳被卡，被救后一脸懵逼</a></li>
+		</ul>
+	</div>
+</body>
+</html>

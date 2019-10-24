@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<script>
+		//升序冒泡排序
+		function ascOrder(arr){
+			//升序
+			for (var i = 0; i < arr.length-1; i++) {
+				
+				var isSorted = true;//排序优化,假设已排序完毕，没有再发生数据交换
+				for (var j = 0; j < arr.length-1-i; j++) {
+					
+					if (arr[j]>arr[j+1]) {
+						var tmp = arr[j];
+						arr[j]=arr[j+1];
+						arr[j+1]=tmp;
+						isSorted = false;//发生了交换，排序未完成
+					}
+				}
+				if (isSorted) {
+					break;
+				}
+				
+			}
+			return	arr;
+		}
+
+
+		//降序冒泡排序
+		function descOrder(arr){
+			//降序
+			for (var i = 0; i < arr.length-1; i++) {
+				
+				var isSorted = true;//排序优化,假设已排序完毕，没有再发生数据交换
+				for (var j = 0; j < arr.length-1-i; j++) {
+					
+					if (arr[j]<arr[j+1]) {
+						var tmp = arr[j];
+						arr[j]=arr[j+1];
+						arr[j+1]=tmp;
+						isSorted = false;//发生了交换，排序未完成
+					}
+				}
+				if (isSorted) {
+					break;
+				}
+				
+			}
+			return	arr;
+		}
+
+
+		// 函数调用，函数不调用，自己不执行
+		// 1.对数组进行升序排序
+		var array = [127,432,123,546,12,456];
+		array = ascOrder(array);
+		console.log(array);
+
+		// 2.对数组进行降序排序
+		var array = [324,564,765,23,267,21];
+		array = descOrder(array);
+		console.log(array);
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

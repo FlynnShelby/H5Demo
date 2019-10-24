@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {/*清除浏览器默认内外边距*/
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;/*使padding 和 border 不会撑开盒子*/
+		}
+		ul {
+			list-style: none;
+		}
+		.top,
+		.banner,
+		.footer {
+			background-color: #eee;
+			border: 1px dashed #ddd;
+			text-align: center;
+		}
+		.top {
+			height: 120px;
+		}
+		.banner {
+			width: 960px;
+			height: 150px;
+			margin: 0 auto;
+			margin-top: 8px;
+			margin-bottom: 8px;
+		}
+		.small {
+			width: 960px;
+			height: 300px;
+			margin: 0 auto;
+			margin-bottom: 8px;
+		}
+		.small ul li {
+			width: 234px;
+			height: 300px;
+			float: left;
+			margin-left: 8px;
+			background-color: #eee;
+			border: 1px dashed #ddd;
+		}
+		.small .noMargin {
+			margin-left: 0;
+		}
+		.footer {
+			height: 120px;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">top</div>
+	<div class="banner">banner</div>
+	<div class="small">
+		<ul>
+			<li class="noMargin">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</div>
+	<div class="small">
+		<ul>
+			<li class="noMargin">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</div>
+	<div class="footer">footer</div>		
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		span {
+			background-color: pink;
+			margin-top: 500px; /*行内元素上下外边距无效*/
+			margin-bottom: 500px;/*行内元素上下外边距无效*/
+			margin-left: 50px;
+			margin-right: 50px;
+
+			padding-top: 30px;/*行内元素上下内边距无效*/
+			padding-bottom: 30px;/*行内元素上下内边距无效*/
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		section {
+			width: 400px;
+			height: 400px;
+			margin-top: 100px;
+			background-color: cyan;
+		}
+		section div {
+			width: 100px;
+			height: 100px;
+		}
+		section div:first-child {
+			background-color: #f80;
+			margin-bottom: 100px;
+		}
+		section div:last-child {
+			background-color: #f30;
+			margin-top: 50px;/*该设置无效,相邻外边距同时设置时，只取最大外边距*/
+		}
+	
+
+		#father {
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			margin-top: 30px;
+
+			/*解决外边距合并(塌陷)问题的三种方法*/
+			/*border: 1px solid red;*/
+			/*padding: 1px;*/
+			overflow: hidden;/*溢出隐藏*/
+		}
+
+		#son {
+			width: 100px;
+			height: 100px;
+			background-color: skyblue;
+			margin-top: 50px;
+		}
+
+		* {/*清除浏览器默认边距*/
+			margin: 0;padding: 0;
+		}
+	</style>
+</head>
+<body>
+
+	<span>我是行内元素</span><br />
+
+	<section>
+		<div></div>
+		<div></div>
+	</section>
+
+	<div id="father">
+		<div id="son"></div>
+	</div>
+	
+</body>

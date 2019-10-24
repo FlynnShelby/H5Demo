@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {/*清除浏览器默认内外边距*/
+			margin: 0;
+			padding: 0;
+			perspective: 1000px;
+		}
+		div {
+			width: 207px;
+			height: 328px;
+			margin: 200px auto;
+			border: 3px solid red;
+			transform: rotateY(30deg);
+			transform-style: preserve-3d;
+		}
+		div img {
+			border: 1px solid skyblue;
+			transform: rotatey(30deg);
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="images/A.jpg" width="200">
+	</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h3>我要做一个三行三列的表格</h3>
+
+	<table border="1" cellspacing="0" cellpadding="5" width="500" height="240" align="center"><!-- 表格标签 -->
+		<!--cellspacing:单元格与单元格边框间隙，默认为2  -->
+		<!-- cellpadding: 单元格与内容间隙，默认为1-->
+		<!-- align:水平对齐方式 -->
+		<tr> <!-- 行标签 -->
+			<th>姓名</th><!-- 表头标签 -->
+			<th>性别</th>
+			<th>年龄</th>
+		</tr>
+		<tr> <!-- 行标签 -->
+			<td>刘德华</td><!-- 单元格标签 -->
+			<td>男</td>
+			<td>56</td>
+		</tr>
+		<tr> 
+			<td>张学友</td>
+			<td>男</td>
+			<td>55</td>
+		</tr>
+
+	</table>
+
+	<!-- 注意事项：
+	1. <table></table>中只能嵌套<tr></tr>。
+	2. <tr></tr>中只能嵌套<td></td>。
+	3. <td></td>标签可以容纳所有元素。 -->
+
+	
+	<h3>第一行和第一列都作为表头</h3>
+
+	<table border="1" cellspacing="0" cellpadding="5" width="500" height="240" align="center"><!-- 表格标签 -->
+		<!--cellspacing:单元格与单元格边框间隙，默认为2  -->
+		<!-- cellpadding: 单元格与内容间隙，默认为1-->
+		<!-- align:水平对齐方式 -->
+		<tr> <!-- 行标签 -->
+			<th>姓名</th><!-- 表头标签 -->
+			<th>性别</th>
+			<th>年龄</th>
+		</tr>
+		<tr> <!-- 行标签 -->
+			<th>刘德华</th>
+			<td>男</td>
+			<td>56</td>
+		</tr>
+		<tr> 
+			<th>张学友</th>
+			<td>男</td>
+			<td>55</td>
+		</tr>
+		
+	</table>
+
+	<h3>表格拆分为头部和主体</h3>
+	<table border="1" cellspacing="0" cellpadding="5" width="500" height="240" align="center"><!-- 表格标签 -->
+		<!--cellspacing:单元格与单元格边框间隙，默认为2  -->
+		<!-- cellpadding: 单元格与内容间隙，默认为1-->
+		<!-- align:水平对齐方式 -->
+		<caption>火影忍者演员表</caption><!-- 表格标题标签 -->
+		<thead><!-- 表头部 -->
+			<tr> <!-- 行标签 -->
+				<th>姓名</th><!-- 表头标签 -->
+				<th>性别</th>
+				<th>年龄</th>
+			</tr>
+		</thead>
+
+		<body><!-- 表主体 -->
+			<tr> 
+				<td>鸣人</td>
+				<td>男</td>
+				<td>18</td>
+			</tr>
+			<tr> 
+				<td>佐助</td>
+				<td>男</td>
+				<td>19</td>
+			</tr>
+		</body>
+		
+		
+	</table>
+
+<h3>单元格合并</h3>
+	<table border="1" cellspacing="0" cellpadding="5" width="500" height="240" align="center"><!-- 表格标签 -->
+		<!--cellspacing:单元格与单元格边框间隙，默认为2  -->
+		<!-- cellpadding: 单元格与内容间隙，默认为1-->
+		<!-- align:水平对齐方式 -->
+		<caption>我喜欢的明星</caption><!-- 表格标题标签 -->
+		<thead><!-- 表头部 -->
+			<tr> <!-- 行标签 -->
+				<th>姓名</th><!-- 表头标签 -->
+				<th>性别</th>
+				<th>年龄</th>
+			</tr>
+		</thead>
+
+		<body><!-- 表主体 -->
+			<tr> <!-- 行标签 -->
+			<td>刘德华</td><!-- 单元格标签 -->
+			<td>男</td>
+			<td>56</td>
+		</tr>
+		<tr> 
+			<td>张学友</td>
+			<td>男</td>
+			<td rowspan="3">55</td><!-- rowspan:跨行合并单元格 -->
+		</tr>
+		<tr> 
+			<td>甄子丹</td>
+			<td>男</td>
+		</tr>
+		<tr> 
+			<td>李连杰</td>
+			<td>男</td>
+		</tr>
+		<tr> 
+			<td>哪吒</td>
+			<td colspan="2">信息不详</td><!--colspan：跨列合并单元格  -->
+		</tr>
+		</body>
+		
+		
+	</table>
+</body>
+</html>

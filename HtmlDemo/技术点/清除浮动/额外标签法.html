@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*很多情况下，父级盒子，不方便给高度，考虑子盒子高度会变 */
+		.xiongda {
+			background-color: pink;
+			width: 600px;
+		}
+		.son1 {
+			background-color: #f33;
+			float: left;
+			width: 180px;
+			height: 180px;
+		}
+		.son2 {
+			background-color: #3f3;
+			float: left;
+			width: 200px;
+			height: 180px;
+		}
+		.xionger {
+			background-color: orange;
+			width: 700px;
+			height: 300px;
+		}
+		
+		.clearfix {
+			clear: both;
+			/* 清除浮动：也叫闭合浮动，清除浮动就是把浮动的盒子圈到里面，让父盒子闭合出口和入口，不让子盒子出来影响其他元素。在CSS中，clear属性用于清除浮动，属性值有：left,right,both，一般都写both，其基本语法格式为：选择器 {clear:属性值;}*/
+		}
+	</style>
+</head>
+<body>
+	<div class="xiongda">
+		<div class="son1">45678543456789765435678976545678</div>
+		<div class="son2">45678543456789765435678976545678</div>
+		<div class="son1">45678543456789765435678976545678</div>
+		<div class="son2">45678543456789765435678976545678</div>
+		<div class="son1">45678543456789765435678976545678</div>
+		<div class="son2">45678543456789765435678976545678</div>
+		<div class="son1">45678543456789765435678976545678</div>
+		<div class="son2">45678543456789765435678976545678</div>
+		<div class="son1">45678543456789765435678976545678</div>
+		<div class="son2">45678543456789765435678976545678</div>
+		<div class="son1">45678543456789765435678976545678</div>
+		<div class="son2">45678543456789765435678976545678</div>
+
+		<div class="clearfix"></div>
+		<!-- 额外标签法
+			W3C推荐清除浮动方法，通过在浮动元素末尾添加一个空标签来清除浮动。
+			例如<div style="clear: both"></div>，或者其他标签br等亦可。
+			优点：通俗易懂，书写方便。
+			缺点：添加许多无意义的标签，结构化较差。
+			*个人不推荐
+		 -->
+	</div>
+	<div class="xionger"></div>
+</body>
+</html>

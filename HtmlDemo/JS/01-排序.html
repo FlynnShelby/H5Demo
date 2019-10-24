@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<script type="text/javascript">
+
+		
+		var arr = [23,68,72,29,51,45];
+		var count=0;//循环次数
+		//升序
+		for (var i = 0; i < arr.length-1; i++) {
+			count++;
+			var isSorted = true;//排序优化,假设已排序完毕，没有再发生数据交换
+			for (var j = 0; j < arr.length-1-i; j++) {
+				count++;
+				if (arr[j]>arr[j+1]) {
+					var tmp = arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=tmp;
+					isSorted = false;//发生了交换，排序未完成
+				}
+			}
+			console.log('***'+i+'***'+arr);
+			if (isSorted) {
+				break;
+			}
+			
+		}
+		console.log(arr);
+		console.log(count);
+
+		count=0;
+		//降序
+		for (var i = 0; i < arr.length-1; i++) {
+			count++;
+			var isSorted = true;
+			for (var j = 0; j < arr.length-1-i; j++) {
+				count++;
+				if (arr[j]<arr[j+1]) {
+					var tmp = arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=tmp;
+					isSorted = false;
+				}
+			}
+			console.log('***'+i+'***'+arr);
+			console.log(count);
+			if (isSorted) {
+				break;
+			}
+		}
+		console.log(arr);
+		console.log(count);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

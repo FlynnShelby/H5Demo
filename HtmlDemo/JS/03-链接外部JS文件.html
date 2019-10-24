@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<script src="main.js"></script>	
+	<script>
+		// 函数调用，函数不调用，自己不执行
+		// 1.对数组进行升序排序
+		var array = [127,432,123,546,12,456];
+		array = ascOrder(array);
+		console.log(array);
+
+		// 2.对数组进行降序排序
+		var array1 = [324,564,765,23,267,21];
+		array1 = descOrder(array1);
+		console.log(array1);
+
+		//3.判断n是不是素数
+		var n=17;
+		var result = isPrimeNumer(n);
+		if (result) {
+			console.log(n+'是素数');
+		}else{
+			console.log(n+'不是素数');
+		}
+
+		//4.求n的阶乘
+		var n=5;
+		console.log(getJieCheng(n));
+
+		//5.求n的阶乘和
+		var num=5;
+		console.log(getJieChengHe(num));
+
+		//6.求 23，45，13，59，12，89 的最大值
+		//方式一：
+		var arr = [23,45,13,59,12,89 ];
+		console.log(getMax(arr));
+		// 方式二：
+		console.log(getMAX(23,45,13,59,12,89));
+
+
+		//7.给一个年分判断是不是闰年
+		console.log(isRunNian(2000));
+
+		//8.给一个日期，计算该日期是当年的第几天
+		console.log(getDays(2019,1,23));
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

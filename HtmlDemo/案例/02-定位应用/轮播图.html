@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {/*清除浏览器默认内外边距*/
+			margin: 0;
+			padding: 0;
+		}
+		ul li {
+			list-style: none;
+		}
+
+		.cyclePic {
+			width: 520px;
+			height: 280px;
+			margin: 100px auto;
+			position: relative;
+		}	
+		.leftIcon,.rightIcon {
+			width: 35px;
+			height: 81px;
+			position: absolute;
+			top: 50%;
+			margin-top: -32px;
+
+		}
+		.leftIcon {
+			left: 0;
+			background: url(images/arrow-left.png) 0 0 no-repeat;
+		}
+		
+		.rightIcon {
+			right: 0;
+			background: url(images/arrow-right.png) 0 0 no-repeat;
+		}
+		.leftIcon:hover,
+		.rightIcon:hover {
+			opacity: .7;/*不透明度*/
+		}
+		
+		.circle {
+			height: 20px;
+			width: 100px;
+			position: absolute;
+			left: 50%;
+			margin-left: -50px;
+			bottom: 10px;
+			/*background-color: pink;*/
+		}
+		.circle li a {
+			width: 10px;
+			height: 10px;
+			margin: 5px;
+			background-color: rgba(0,0,0,0.4);
+			border-radius: 5px;
+			float: left;
+		}
+		.circle li a:hover {
+			background-color: #e43825;
+		}
+	</style>
+</head>
+<body>
+	<div class="cyclePic">
+		<img src="images/img1.jpg" />
+		<a href="#" class="leftIcon"></a>
+		<a href="#" class="rightIcon"></a>
+		<ul class="circle">
+			<li ><a href="#" class="current"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			
+		</ul>
+	</div>
+</body>
+</html>

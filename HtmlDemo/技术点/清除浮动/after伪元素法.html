@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+
+		.xiongda {
+			border: 1px solid pink;
+			width: 600px;
+		}
+		.son1 {
+			background-color: #f33;
+			float: left;
+			width: 180px;
+			height: 180px;
+		}
+		.son2 {
+			background-color: #3f3;
+			float: left;
+			width: 200px;
+			height: 180px;
+		}
+		.xionger {
+			border: 1px solid blue;
+			width: 700px;
+			height: 300px;
+		}
+		
+		.clearfix:after {
+			content: ".";/* 内容为小点，尽量加不要空，否则旧版本浏览器有空隙 */
+			display: block;/* 转换为块元素*/
+			height: 0;/*清除高度，追加小点会导致盒子高度变为一行文字的高度*/
+			visibility: hidden;/*隐藏盒子（隐藏小点）*/
+			clear: both;/*清除浮动，使子盒子撑开高度，平级盒子下移紧贴*/
+		}
+		.clearfix {
+			*zoom: 1; 
+			/* * 代表ie6、7 能识别的特殊符号，带有这个*属性，只有ie6、7才执行
+			zoom 就是ie6、7 清除浮动的方法 */
+		}
+
+		/*after伪元素法 
+			:after 方式为空元素的升级版，好处是不用单独加标签了
+			使用方法：
+			.clearfix:after { content: "."; display: block; height: 0; visibility: hidden; clear: both; };
+			.clearfix { *zoom: 1; } //IE6、7专有
+			优点：符合闭合浮动思想，结构语义化正确。
+			缺点：由于IE6、7不支持:after，使用zoom:1触发hasLayout。
+			代表网站：百度、淘宝、网易等
+		*/
+		
+	</style>
+</head>
+<body>
+	<div class="xiongda clearfix">
+		<div class="son1"></div>
+		<div class="son2"></div>
+		<div class="son1"></div>
+		<div class="son2"></div>
+		<div class="son1"></div>
+		<div class="son2"></div>
+		<div class="son1"></div>
+		<div class="son2"></div>
+		<div class="son1"></div>
+		<div class="son2"></div>
+		<div class="son1"></div>
+		<div class="son2"></div>
+
+	</div>
+	<div class="xionger"></div>
+</body>
+</html>

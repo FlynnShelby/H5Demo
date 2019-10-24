@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {/*清除浏览器默认内外边距*/
+			margin: 0;
+			padding: 0;
+		}
+		/*css内容*/
+	</style>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.12/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		{{ msg  }}<!-- 插值表达式{{}}，调用msg替换信息 -->
+		{{ doSomething() }}<!-- 调用函数 -->
+		<p v-cloak>+++++ {{ msg }} ----</p>	
+		<!-- 使用v-cloak能够解决插值表达式闪烁的问题（即网速慢的情况下，能先看到表达式，然后表达式被替换） -->
+
+		<h4 v-text="msg">==========</h4>
+		<!-- 默认 v-text  是没有闪烁问题的 -->
+		<!-- v-text 会覆盖元素中原本的全部内容，但是插值表达式只会替换自己的这个占位符，不会把整个元素的内容清空 -->
+		
+		<div>{{msg2}}!!!</div>
+		<div v-text="msg2">!!!</div>
+		<div v-html="msg2">!!!</div>
+		<!-- v-html会将替换文本转为Html格式 ，会替换元素的全部内容-->
+
+		<input type="button" value="按钮" v-bind:title="myTitle + '123'">
+		<!-- v-bind: 是Vue中，提供的用于绑定属性的指令 ，可简写为  :要绑定的属性 -->
+		<!-- v-bind 中可以写合法的JS表达式 如加法表达式 + -->
+		<input type="button" value="按钮" :title="myTitle + '123'"><!-- 简写 -->
+
+		<br />
+		<!-- 原JS写法 -->
+		<input type="button" value="按钮" id="btn">
+		<!-- Vue 中提供了 v-on: 事件绑定机制-->
+		<!-- v-on: 可简写为 @ -->
+		<input type="button" value="按钮" v-on:click="show">
+		<input type="button" value="按钮" @click="show">
+		<input type="button" value="按钮" v-on:mouseover="show"><!-- 也可绑定其他事件 -->
+
+	</div>
+
+	<script type="text/javascript">
+	
+		var vm = new Vue ({
+			// 字符串值使用''或者""都可以
+		  el: "#app",
+		  data: {
+		  	msg: "欢迎学习Vue!",
+		  	msg2:"<h1>哈哈哈，我是一个大大的H1，我大，我骄傲</h1>",
+		  	myTitle:'这是一个自己定义的title',
+		  },
+		  methods: {//这个methods定义了当前Vue实例所有可用的方法
+		  	doSomething:function () {
+		  		console.log(this.msg)
+		  	},
+		  	show:function(){
+		  		alert('hi')
+		  	}
+		  }
+			
+		})
+		
+
+		document.getElementById("btn").onclick = function(){
+			alert("Hello")
+		}
+
+	</script>
+	
+</body>
+</html>

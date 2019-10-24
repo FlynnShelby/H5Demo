@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {/*清除浏览器默认内外边距*/
+			margin: 0;
+			padding: 0;
+		}
+		.nav {
+			height: 75px;
+			background-color: #eee;
+			overflow: hidden;
+		}
+		.nav li {
+			list-style: none;
+			float: left;
+			margin: 0 10px;
+			padding-top: 22px;
+		}
+		.nav ul li a {
+			display: block; 
+			background: url(images/圆角框-凸.png) no-repeat;
+			line-height: 32px;
+			padding-left: 16px;
+			border-radius: 16px;
+
+			color: #fff;
+			font-size: 14px;
+			text-decoration: none;
+		}
+		.nav ul li a span {
+			display: block; 
+			background: url(images/圆角框-凸.png) no-repeat right;
+			line-height: 32px;
+			padding-right: 16px;
+			border-radius: 16px;
+		}
+		.nav ul li a:hover,
+		.nav ul li a:hover span {
+			background-image: url(images/圆角框-凹.png);
+		}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<ul>
+			<li><a href="#"><span>首页</span></a></li>
+			<li><a href="#"><span>帮助与反馈</span></a></li>
+			<li><a href="#"><span>公司简介</span></a></li>
+			<li><a href="#"><span>产品部</span></a></li>
+			<li><a href="#"><span>合作公司</span></a></li>
+			<li><a href="#"><span>联系我们</span></a></li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {/*清除浏览器默认内外边距*/
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;/*使padding 和 border 不会撑开盒子*/
+		}
+		.top,
+		.banner,
+		.main,
+		.footer {
+			background-color: #eee;
+			border: 1px dashed #ddd;
+			width: 960px;
+			margin: 0 auto;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+		.top {
+			height: 120px;
+		}
+		.banner {
+			height: 150px;
+		}
+		.main {
+			height: 500px;
+		}
+		.footer {
+			height: 150px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="top">top</div>
+	<div class="banner">banner</div>
+	<div class="main">main</div>
+	<div class="footer">footer</div>
+</body>
+</html>
